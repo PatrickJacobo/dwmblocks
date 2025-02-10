@@ -5,9 +5,8 @@ static const Block blocks[] = {
 	{"CPU:", "top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}'",	30,		0},
 	{"Bat:", "upower -i $(upower -e | grep BAT) | grep -E 'percentage' | awk '{print $2}'",	30,		0},
 
+    {"", "date +'%Y-%m-%d %H:%M'",5,0},
 
-
-	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
 };
 
 //sets delimiter between status commands. NULL character ('\0') means no delimiter.
